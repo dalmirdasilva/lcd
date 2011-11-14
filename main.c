@@ -19,9 +19,9 @@ void main() {
     init_io();
     
     lcd_init();
+    
     lcd_custom_char_create(custom_chars, 0, 3);
-    delay_ms(1000);
-    PORTEbits.RE1 = 0;
+    delay_ms(500);
     lcd_command(LCD_CMD_DISPLAY_CONTROL | LCD_CMD_DISPLAY_CONTROL_ON);
     //lcd_test_do();
     while(1) {
